@@ -1,0 +1,23 @@
+<ion-view view-title="Crime.ie">
+    <ion-content scroll="false">
+        <ion-slides slider="slider" ion-slides-tabs slide-tabs-scrollable="false">
+            <ion-slide-page ion-slide-tab-label="News">
+              <ion-content has-header="true">
+                <articles />
+              </ion-content>
+            </ion-slide-page>
+            <ion-slide-page ion-slide-tab-label="Report">
+              <ion-content has-header="true">
+                <report-component />
+              </ion-content>
+            </ion-slide-page>
+            <ion-slide-page ion-slide-tab-label="Settings">
+              <ion-list>
+                <ion-toggle  ng-model="settings.notifications" ng-click="updateSettings()">
+                    Enable Notifications
+                </ion-toggle>
+              </ion-list>
+            </ion-slide-page>
+        </ion-slides>
+    </ion-content>
+</ion-view>

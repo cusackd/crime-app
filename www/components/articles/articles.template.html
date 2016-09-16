@@ -1,0 +1,9 @@
+<ion-list>
+  <ion-item class="item-thumbnail-left" ng-repeat="article in articles" href="#/slidetabs/news/{{article.ID}}">
+    <img ng-src="{{article.featured_image.attachment_meta.sizes.thumbnail.url}}">
+      <h3 ng-bind-html="article.title"></h3>
+      <div ng-bind-html="article.excerpt"></div>
+      <!-- {{article.excerpt | htmlToPlaintext}} -->
+  </ion-item>
+
+</ion-list>

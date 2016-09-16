@@ -1,0 +1,34 @@
+<div class="loading" ng-show="ReportCtrl.loading">
+  Loading...
+</div>
+
+<div ng-show="ReportCtrl.successMessage">
+  Success
+
+  <button type="button" name="button" ng-click="ReportCtrl.submitAnother()">Submit another report</button>
+
+</div>
+
+<div ng-show="ReportCtrl.errorMessage">
+  Error
+</div>
+
+<div class="list" ng-hide="ReportCtrl.hideForm">
+  <label class="item item-input">
+    <input type="text" placeholder="Location of incident" ng-model="ReportCtrl.reportForm.location">
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="When did it happen" ng-model="ReportCtrl.reportForm.when">
+  </label>
+  <label class="item item-input">
+    <textarea placeholder="Details of the incident" ng-model="ReportCtrl.reportForm.details"></textarea>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Email address (This is private)" ng-model="ReportCtrl.reportForm.email"></textarea>
+  </label>
+  <div class="padding">
+    <button class="button button-block button-positive" ng-click="ReportCtrl.submitForm()">
+      Submit Incident Report
+    </button>
+  </div>
+</div>
