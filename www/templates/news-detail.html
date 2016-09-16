@@ -1,10 +1,13 @@
 <ion-view view-title="{{article.title}}">
+  <ion-nav-title>{{article.title}}</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+      <favourite-button ng-if="article.ID" id="article.ID" type="'post'"></favourite-button>
+    </ion-nav-buttons>
   <ion-content class="article">
     <div class="image-holder">
 
       <img ng-src="{{article.featured_image.source}}"></img>
     </div>
-
     <div class="padding">
       <h1 ng-bind-html="article.title"></h1>
       <div ng-bind-html="article.content"></div>
